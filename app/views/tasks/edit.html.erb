@@ -1,0 +1,11 @@
+<h1 style="color: #224427">Editing Task</h1>
+
+<br>
+
+<%= render "form", task: @task %>
+
+<div class="nav">
+    <%= link_to "Show this task", @task, class: "taskLinkto custom-btn custom-btn-margin custom-btn-bg-color" %> | 
+    <%= link_to "Back to tasks", tasks_path, class: "taskLinkto custom-btn custom-btn-margin custom-btn-bg-color" %>
+</div>
+

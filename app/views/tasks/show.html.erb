@@ -1,0 +1,10 @@
+<p style="color: #224427"><%= notice %></p>
+<h1 style="color: #657B72">Task Details</h1>
+<%= render @task %>
+
+<div class="nav">
+  <%= link_to "Edit this task", edit_task_path(@task), class: "custom-btn custom-btn-margin" %>  
+  <%= link_to "Back to tasks", tasks_path, class: "custom-btn custom-btn-margin" %>
+
+  <%= button_to "Destroy this task", @task, method: :delete, class: "custom-btn2 custom-btn2-margin" %>
+</div>

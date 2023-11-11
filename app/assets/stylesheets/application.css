@@ -1,0 +1,470 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* app/assets/stylesheets/application.css */
+
+/* Add your CSS styles here */
+:root {
+  --white-color:                  #ffffff;
+  --primary-color:                #657B72;
+  --secondary-color:              #C9E3CD;
+  --section-bg-color:             #f0f8ff;
+  --custom-btn-bg-color:          #AED5B4;
+  --custom-btn-bg-hover-color:    #91A19B;
+  --custom-btn2-bg-color:         #91A19B;
+  --custom-btn2-bg-hover-color:   #AED5B4;
+  --dark-color:                   #170312;
+  --p-color:                      #717275;
+  --border-color:                 #070b08;
+  --link-hover-color:             #657B72;
+
+  --body-font-family:             'Open Sans', sans-serif;
+  --title-font-family:            'Montserrat', sans-serif;
+
+  --h1-font-size:                 58px;
+  --h2-font-size:                 46px;
+  --h3-font-size:                 32px;
+  --h4-font-size:                 28px;
+  --h5-font-size:                 24px;
+  --h6-font-size:                 22px;
+  --p-font-size:                  20px;
+  --menu-font-size:               14px;
+  --nav-font-size:                22px;
+  --btn-font-size:                18px;
+  --copyright-font-size:          16px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-normal:           400;
+  --font-weight-medium:           550;
+  --font-weight-semibold:         600;
+  --font-weight-bold:             700;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--body-font-family); 
+}
+
+/*Headers and Navigations*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--title-font-family); 
+  font-weight: var(--font-weight-semibold);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  color: var(--primary-color);
+  font-size: var(--h6-font-size);
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+ul li {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+a, 
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #ecf3f2;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 0;
+  border-top: 0;
+  border-right: 5px;
+  border-left: 5px;
+  color: var(--p-color);
+  font-family: var(--title-font-family);
+  font-size: var(--nav-font-size);
+  font-weight: var(--font-weight-medium);
+  padding: 15px 25px;
+  transition: all 0.3s;
+}
+
+.nav-tabs .nav-link:first-child {
+  margin-right: 20px;
+}
+
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus, 
+.nav-tabs .nav-link:hover {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.custom-btn {
+  background: var(--custom-btn-bg-color);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+}
+
+.custom-btn:hover {
+  background: var(--custom-btn-bg-hover-color);
+  color: var(--white-color);
+}
+
+.custom-border-btn {
+  background: transparent;
+  border: 2px solid var(--custom-btn-bg-color);
+  color: var(--custom-btn-bg-color);
+}
+
+.custom-border-btn:hover {
+  background: var(--custom-btn-bg-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+.custom-btn-bg-white {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+
+.custom-btn-margin {
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.custom-btn2 {
+  background: var(--custom-btn2-bg-color);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--btn-font-size);
+  font-weight: var(--font-weight-semibold);
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 5px 10px;
+}
+
+.custom-btn2:hover {
+  background: var(--custom-btn2-bg-hover-color);
+  color: var(--white-color);
+}
+
+.custom-border2-btn {
+  background: transparent;
+  border: 2px solid var(--custom-btn2-bg-color);
+  color: var(--custom-btn2-bg-color);
+}
+
+.custom-border2-btn:hover {
+  background: var(--custom-btn2-bg-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+.custom-btn2-bg-white {
+  border-color: var(--white-color);
+  color: var(--white-color);
+}
+/*SITE HEADER*/
+.site-header {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.site-header .container {
+  height: 100%;
+}
+
+.breadcrumb-item+.breadcrumb-item::before,
+.breadcrumb-item a:hover,
+.breadcrumb-item.active {
+  color: var(--white-color);
+}
+
+.site-header .custom-icon {
+  color: var(--white-color);
+  font-size: var(--h4-font-size);
+}
+
+.site-header .custom-icon:hover {
+  color: var(--secondary-color);
+}
+
+
+.container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #91A19B; /* Updated color */
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar styles */
+.sticky-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.sticky-wrapper.is-sticky .navbar {
+  background-color: var(--secondary-color);
+}
+
+.navbar {
+  background: transparent;
+  border-bottom: 1px solid rgba(128, 208, 199, 0.35);
+  z-index: 9;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  display: block;
+}
+
+.navbar-brand span {
+  font-family: var(--title-font-family);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  border-radius: var(--border-radius-large);
+  margin: 10px;
+  padding: 10px;
+}
+
+.navbar-nav .nav-link {
+  display: inline-block;
+  color: var(--white-color);
+  font-family: var(--title-font-family); 
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar .dropdown-menu {
+  background: var(--white-color);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  border: 0;
+  display: inherit;
+  opacity: 0;
+  min-width: 9rem;
+  margin-top: 20px;
+  padding: 13px 0 10px 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.navbar .dropdown-menu::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid var(--white-color);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.navbar .dropdown-item {
+  display: inline-block;
+  color: var(--p-bg-color);
+  font-family: var(--title-font-family); 
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.navbar .dropdown-item.active, 
+.navbar .dropdown-item:active,
+.navbar .dropdown-item:focus, 
+.navbar .dropdown-item:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+/*SITE FOOTER*/
+.site-footer {
+  border-bottom: 10px solid var(--secondary-color);
+  position: relative;
+}
+
+.site-footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 200px 200px;
+  border-color: transparent transparent var(--secondary-color) transparent;
+  pointer-events: none;
+}
+
+.site-footer-title {
+  color: var(--primary-color); 
+}
+
+.site-footer .dropdown-menu {
+  padding: 0;
+}
+
+.site-footer .dropdown-item {
+  color: var(--p-color);
+  font-size: var(--menu-font-size);
+  font-weight: var(--font-weight-medium);
+  padding: 4px 18px;
+}
+
+.site-footer .dropdown-item:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.site-footer .dropdown-menu li:first-child .dropdown-item {
+  padding-top: 10px;
+}
+
+.site-footer .dropdown-menu li:last-child .dropdown-item {
+  padding-bottom: 12px;
+}
+
+.site-footer .dropdown-toggle {
+  background-color: var(--secondary-color);
+  border-color: var(--white-color);
+}
+
+.site-footer .dropdown-toggle:hover {
+  background-color: var(--primary-color);
+  border-color: transparent;
+}
+
+.site-footer-links {
+  padding-left: 0;
+}
+
+.site-footer-link-item {
+  display: block;
+  list-style: none;
+  line-height: normal;
+}
+
+.site-footer-link {
+  color: var(--secondary-color);
+  font-size: var(--copyright-font-size);
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
+.copyright-text {
+  font-size: var(--copyright-font-size);
+}
+
+/*Task*/
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item {
+  border: 1px solid #ccc; /* Add a border to create a box */
+  border-radius: 8px; /* Optional: Add rounded corners for a softer look */
+  padding: 15px; /* Add padding for space inside the box */
+  margin-bottom: 15px; /* Add margin for space between tasks */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+  /* Add more styles as needed */

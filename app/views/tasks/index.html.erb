@@ -1,0 +1,18 @@
+<p><%= notice %></p> 
+
+<div class="section-bg">
+  <h1 class="h1-font-size" style="color: #657B72">Tasks</h1>
+
+  <div class="tasks-container">
+    <% @tasks.each do |task| %>
+      <div class="task-item">
+        <%= render task %>
+        <p>
+          <%= link_to "Show this task", task, class: "custom-btn" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "New task", new_task_path, class: "custom-btn2 custom-btn-bg-hover-color" %>
+</div>
